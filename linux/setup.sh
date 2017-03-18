@@ -81,7 +81,7 @@ gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.gedit.preferences.editor auto-save true
 gsettings set org.gnome.gedit.preferences.editor create-backup-copy false
 gsettings set org.gnome.gedit.preferences.editor display-line-numbers true
-gsettings set org.gnome.gedit.preferences.editor tab-size 2
+gsettings set org.gnome.gedit.preferences.editor tabs-size 2
 gsettings set org.gnome.nautilus.preferences sort-directories-first true
 
 
@@ -90,4 +90,4 @@ dconf write /org/compiz/profiles/unity/plugins/unityshell/icon-size 32
 dconf write /org/compiz/profiles/unity/plugins/core/vsize 2
 dconf write /org/compiz/profiles/unity/plugins/core/hsize 2
 
-rm -rf os_setup
+echo 'OS Setup Complete!'
