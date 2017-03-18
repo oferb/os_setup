@@ -19,7 +19,10 @@ sudo apt-get -y --force-yes upgrade
 
 # Install apps
 sudo apt-get -y install \
-git k4dirstat meld openjdk-8-jdk openjdk-8-jre kile imagemagick gimp libreoffice octave php7.0-cli php7.0-curl curl gnome-terminal vlc cryptkeeper autokey-gtk autokey-common ffmpeg python2.7 python-pip python-dev python-pip virtualenv ipython ipython-notebook skype sublime-text-installer virtualbox virtualbox-dkms virtualbox-guest-additions-iso libappindicator1 ubuntu-restricted-extras rar latexdiff
+git k4dirstat meld openjdk-8-jdk openjdk-8-jre kile imagemagick gimp libreoffice octave php7.0-cli php7.0-curl curl gnome-terminal vlc autokey-gtk autokey-common ffmpeg python2.7 python-pip python-dev python-pip virtualenv ipython ipython-notebook skype sublime-text-installer virtualbox virtualbox-dkms virtualbox-guest-additions-iso libappindicator1 ubuntu-restricted-extras rar latexdiff
+
+sudo apt-get -y install \
+cryptkeeper
 
 sudo apt-get -y --allow-unauthenticated install \
 dropbox google-chrome-stable google-talkplugin
