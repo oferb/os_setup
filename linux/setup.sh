@@ -18,6 +18,12 @@ sudo apt-get -y --force-yes upgrade
 
 
 # Install apps
+echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+sudo apt-get -y install ttf-mscorefonts-installer
+
+echo encfs encfs/security-information seen true | sudo debconf-set-selections
+sudo apt-get -y install encfs
+
 sudo apt-get -y install \
 git k4dirstat meld openjdk-8-jdk openjdk-8-jre kile imagemagick gimp libreoffice octave php7.0-cli php7.0-curl curl gnome-terminal vlc autokey-gtk autokey-common ffmpeg python2.7 python-pip python-dev python-pip virtualenv ipython ipython-notebook skype sublime-text-installer virtualbox virtualbox-dkms virtualbox-guest-additions-iso libappindicator1 ubuntu-restricted-extras rar latexdiff
 
