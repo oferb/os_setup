@@ -2,11 +2,17 @@
 
 if [ "$(uname)" == "Linux" ]; then
   sudo apt-get install git
-  mkdir devel
+  mkdir -p devel
   cd devel
-  git clone https://github.com/oferb/os_setup.git
+  if [ ! -d "os_setup" ]
+  then
+    git clone https://github.com/oferb/os_setup.git
+  else
+    cd os_setup
+    git pull
+  fi
   cd ~/
-  os_setup/linux/setup.sh
+  devel/os_setup/linux/setup.sh
 elif [ "$(uname)" == "Darwin" ]; then
   # Untested:
   brew install git
