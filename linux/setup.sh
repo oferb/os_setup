@@ -53,7 +53,7 @@ mkdir ~/opt
 ###cp -ar ./os_setup/scripts/* ~/opt/scripts/
 ###chmod +x ~/opt/scripts/*
 shopt -s dotglob
-ln -a ./os_setup/linux/dotfiles/* ~
+ln -f devel/os_setup/linux/dotfiles/* ~
 ###.profile - possibly add "export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES=1024x768"
 
 
