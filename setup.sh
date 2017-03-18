@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$(uname)" == "Linux" ]; then
-  sudo apt-get install git
+  sudo apt-get -y install git
   mkdir -p devel
   cd devel
   if [ ! -d "os_setup" ]
