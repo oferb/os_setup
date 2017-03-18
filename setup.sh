@@ -5,6 +5,7 @@ if [ "$(uname)" == "Linux" ]; then
   mkdir devel
   cd devel
   git clone https://github.com/oferb/os_setup.git
+  cd ~/
   os_setup/linux/setup.sh
 elif [ "$(uname)" == "Darwin" ]; then
   # Untested:
@@ -12,5 +13,6 @@ elif [ "$(uname)" == "Darwin" ]; then
   mkdir devel
   cd devel
   git clone https://github.com/oferb/os_setup.git
+  cd ~/
   os_setup/mac/setup.sh
 fi
