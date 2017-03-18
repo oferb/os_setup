@@ -2,6 +2,7 @@
 
 # Based on http://blog.self.li/post/74294988486/creating-a-post-installation-script-for-ubuntu
 
+
 # Add repos
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 sudo add-apt-repository -y "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
@@ -10,9 +11,11 @@ sudo add-apt-repository -y "deb http://dl.google.com/linux/chrome/deb/ stable ma
 sudo add-apt-repository -y "deb http://dl.google.com/linux/talkplugin/deb/ stable main"
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 
+
 # Basic update
 sudo apt-get -y --force-yes update
 sudo apt-get -y --force-yes upgrade
+
 
 # Install apps
 sudo apt-get -y install \
@@ -21,9 +24,11 @@ git k4dirstat meld openjdk-8-jdk openjdk-8-jre kile imagemagick gimp libreoffice
 sudo apt-get -y --allow-unauthenticated install \
 dropbox google-chrome-stable google-talkplugin
 
+
 # Pip installs
 pip install --upgrade pip
 sudo pip install virtualenvwrapper
+
 
 # Folders
 rm -rf ~/Documents
@@ -35,14 +40,21 @@ rm ~/examples.desktop
 mkdir ~/devel
 mkdir ~/opt
 
+
 # Scripts
 ###mkdir ~/.scripts
 ###cp -ar ./data/scripts/* ~/.scripts/
 ###chmod +x ~/.scripts/*
 
+
 # Dotfiles
 ###shopt -s dotglob
 ###cp -a ./data/dotfiles/* ~
+###.bashrc
+###.gitconfig
+###.profile - possibly added "export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES=1024x768"
+###.vimrc
+
 
 # Arcanist install
 cd ~/opt
@@ -52,6 +64,7 @@ git clone https://github.com/phacility/libphutil.git
 git clone https://github.com/phacility/arcanist.git
 arc upgrade
 cd ~/
+
 
 # Update system settings
 gsettings set com.canonical.indicator.power show-percentage true
@@ -68,6 +81,7 @@ gsettings set org.gnome.gedit.preferences.editor create-backup-copy false
 gsettings set org.gnome.gedit.preferences.editor display-line-numbers true
 gsettings set org.gnome.gedit.preferences.editor tab-size 2
 gsettings set org.gnome.nautilus.preferences sort-directories-first true
+
 
 # Update some more system settings
 dconf write /org/compiz/profiles/unity/plugins/unityshell/icon-size 32
