@@ -40,21 +40,14 @@ rm ~/examples.desktop
 mkdir ~/devel
 mkdir ~/opt
 
+# Dotfiles and scripts
 git clone https://github.com/oferb/os_setup.git
-
-# Scripts
-###mkdir ~/.scripts
-###cp -ar ./data/scripts/* ~/.scripts/
-###chmod +x ~/.scripts/*
-
-# Dotfiles
-cp os_setup/dotfiles/* ~/
-###shopt -s dotglob
-###cp -a ./data/dotfiles/* ~
-###.bashrc
-###.gitconfig
-###.profile - possibly added "export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES=1024x768"
-###.vimrc
+###mkdir ~/opt/scripts
+###cp -ar ./os_setup/scripts/* ~/opt/scripts/
+###chmod +x ~/opt/scripts/*
+shopt -s dotglob
+cp -a ./os_setup/dotfiles/* ~
+###.profile - possibly add "export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES=1024x768"
 
 
 # Arcanist install
