@@ -94,7 +94,7 @@ shopt -s histappend                       # append to history, don't overwrite i
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-PATH=$PATH:$HOME/opt/scripts:/$HOME/opt/encfsui:$HOME/opt/arcanist/bin
+PATH=$PATH:$HOME/opt/scripts:/$HOME/opt/encfsui:$HOME/opt/arc/arcanist/bin
 alias dropbox='~/.dropbox-dist/dropboxd'
 alias androidstudio='/home/oferb/opt/android-studio/bin/studio.sh'
 alias ll='ls -alF'
