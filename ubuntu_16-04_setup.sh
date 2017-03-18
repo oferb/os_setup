@@ -40,14 +40,15 @@ rm ~/examples.desktop
 mkdir ~/devel
 mkdir ~/opt
 
+git clone https://github.com/oferb/os_setup.git
 
 # Scripts
 ###mkdir ~/.scripts
 ###cp -ar ./data/scripts/* ~/.scripts/
 ###chmod +x ~/.scripts/*
 
-
 # Dotfiles
+cp os_setup/dotfiles/* ~/
 ###shopt -s dotglob
 ###cp -a ./data/dotfiles/* ~
 ###.bashrc
@@ -87,3 +88,5 @@ gsettings set org.gnome.nautilus.preferences sort-directories-first true
 dconf write /org/compiz/profiles/unity/plugins/unityshell/icon-size 32
 dconf write /org/compiz/profiles/unity/plugins/core/vsize 2
 dconf write /org/compiz/profiles/unity/plugins/core/hsize 2
+
+rm -rf os_setup
