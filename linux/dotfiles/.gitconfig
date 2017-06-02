@@ -9,4 +9,4 @@
 	ui = auto
 	ui = auto
 [diff]
-	external = /home/oferb/opt/git_meld.py
+	external = /home/ofer/opt/git_meld.py

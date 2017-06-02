@@ -29,8 +29,17 @@ sudo apt-get -y install ttf-mscorefonts-installer
 sudo apt-get -y install \
 cryptkeeper git k4dirstat meld openjdk-8-jdk openjdk-8-jre kile imagemagick gimp libreoffice octave php7.0-cli php7.0-curl curl gnome-terminal vlc autokey-gtk autokey-common ffmpeg python2.7 python-pip python-dev python-pip virtualenv ipython ipython-notebook skype sublime-text-installer virtualbox virtualbox-dkms virtualbox-guest-additions-iso libappindicator1 ubuntu-restricted-extras rar latexdiff
 
+sudo apt-get install python3-pip
+sudo pip3 install selenium
+sudo apt-get install chromium-chromedriver
+
+
 sudo apt-get -y --allow-unauthenticated install \
 dropbox google-chrome-stable google-talkplugin
+sudo apt install npm
+ln -s /usr/bin/nodejs /usr/bin/node
+sudo npm install --global gulp-cli
+sudo apt-get install xdotool
 
 
 # Pip installs
@@ -56,16 +65,6 @@ shopt -s dotglob
 ln -f devel/os_setup/linux/dotfiles/* ~
 source ~/.bashrc
 ###.profile - possibly add "export CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES=1024x768"
-
-
-# Arcanist install
-cd ~/opt
-mkdir arc
-cd arc
-git clone https://github.com/phacility/libphutil.git
-git clone https://github.com/phacility/arcanist.git
-arc upgrade
-cd ~/
 
 
 # Update system settings

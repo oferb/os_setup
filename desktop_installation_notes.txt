@@ -1,0 +1,4 @@
+Set connection to "Automatic (DHCP) addresses only" and DNS servers to "208.67.222.222, 208.67.220.220"
+
+sudo apt-get update
+sudo apt --fix-broken install

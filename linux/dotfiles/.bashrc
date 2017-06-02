@@ -101,3 +101,14 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+PATH=$PATH:/base/head/opt/webdrivers
+
+# function to set terminal title  
+function set-title() {
+  if [[ -z "$ORIG" ]]; then
+    ORIG=$PS1
+  fi
+  TITLE="\[\e]2;$*\a\]"
+  PS1=${ORIG}${TITLE}
+}
+# Make this a command: grep -rnw 'less' -e "test"
